@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomu ya Mkopo - Precious Investment Co. Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="mkopaji.html" class="active">Mkopaji</a></li>
+            <li><a href="mdhamini.html">Mdhamini</a></li>
+            <li><a href="ofisi.html">Ofisi</a></li>
+            <li><a href="kutuhusu.html">Kutuhusu</a></li>
+            <li><a href="register.html">Jisajili</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="header">
+            <h1>PRECIOUS INVESTMENT CO.LTD</h1>
+            <p>P.O.BOX 616, MOROGORO – IFAKARA BRANCH</p>
+            <p>PHONE NO. 0746-667797</p>
+        </header>
+
+        <form id="loanApplication">
+            <!-- Taarifa za Mkopaji -->
+            <section class="form-section">
+                <h2>TAARIFA YA MKOPAJI</h2>
+                <div class="input-box">
+                    <label for="fullName">Jina Kamili:</label>
+                    <input type="text" id="fullName" name="fullName" required>
+                </div>
+                <div class="input-box">
+                    <label for="photoBorrower">Picha ya Mkopaji:</label>
+                    <input type="file" id="photoBorrower" name="photoBorrower" accept="image/*">
+                </div>
+                <div class="input-box">
+                    <label for="address">Mahali Anapoishi:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="input-box">
+                    <label for="street">Mtaa:</label>
+                    <input type="text" id="street" name="street">
+                </div>
+                <div class="input-box">
+                    <label for="ward">Kata:</label>
+                    <input type="text" id="ward" name="ward">
+                </div>
+                <div class="input-box">
+                    <label for="division">Tarafa:</label>
+                    <input type="text" id="division" name="division">
+                </div>
+                <div class="input-box">
+                    <label for="district">Wilaya:</label>
+                    <input type="text" id="district" name="district">
+                </div>
+                <div class="input-box">
+                    <label for="region">Mkoa:</label>
+                    <input type="text" id="region" name="region">
+                </div>
+                <div class="input-box">
+                    <label for="houseNumber">Namba ya Nyumba:</label>
+                    <input type="text" id="houseNumber" name="houseNumber">
+                </div>
+                <div class="input-box">
+                    <label for="children">Idadi ya Watoto:</label>
+                    <input type="number" id="children" name="children">
+                </div>
+                <div class="input-box">
+                    <label for="maritalStatus">Hali ya Ndoa:</label>
+                    <select id="maritalStatus" name="maritalStatus">
+                        <option value="">Chagua...</option>
+                        <option value="married">Nimeoa/Nimeolewa</option>
+                        <option value="single">Sijaoa/Sijaolewa</option>
+                    </select>
+                </div>
+                <div class="input-box">
+                    <label for="occupation">Kazi Anayofanya:</label>
+                    <input type="text" id="occupation" name="occupation">
+                </div>
+                <div class="input-box">
+                    <label for="workStation">Kituo cha Kazi:</label>
+                    <input type="text" id="workStation" name="workStation">
+                </div>
+                <div class="input-box">
+                    <label for="streetWork">Mtaa/Kitongoji:</label>
+                    <input type="text" id="streetWork" name="streetWork">
+                </div>
+                <div class="input-box">
+                    <label for="wardWork">Kata:</label>
+                    <input type="text" id="wardWork" name="wardWork">
+                </div>
+                <div class="input-box">
+                    <label for="divisionWork">Tarafa:</label>
+                    <input type="text" id="divisionWork" name="divisionWork">
+                </div>
+                <div class="input-box">
+                    <label for="districtWork">Wilaya:</label>
+                    <input type="text" id="districtWork" name="districtWork">
+                </div>
+                <div class="input-box">
+                    <label for="regionWork">Mkoa:</label>
+                    <input type="text" id="regionWork" name="regionWork">
+                </div>
+                <div class="input-box">
+                    <label for="phone">Namba ya Simu:</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="input-box">
+                    <label for="signature">Saini:</label>
+                    <input type="text" id="signature" name="signature">
+                </div>
+            </section>
+
+            <!-- Taarifa za Serikali za Mitaa -->
+            <section class="form-section">
+                <h2>TAARIFA ZA SERIKALI ZA MITAA</h2>
+                <div class="input-box">
+                    <label for="localName">Jina la Mwenyekiti/ Mtendaji:</label>
+                    <input type="text" id="localName" name="localName" required>
+                </div>
+                <div class="input-box">
+                    <label for="localStreet">Mtaa:</label>
+                    <input type="text" id="localStreet" name="localStreet" required>
+                </div>
+                <div class="input-box">
+                    <label for="localWard">Kata:</label>
+                    <input type="text" id="localWard" name="localWard" required>
+                </div>
+                <div class="input-box">
+                    <label for="localContact">Mawasiliano:</label>
+                    <input type="text" id="localContact" name="localContact" required>
+                </div>
+                <div class="input-box">
+                    <label for="localSignature">Sahihi:</label>
+                    <input type="text" id="localSignature" name="localSignature" required>
+                </div>
+            </section>
+
+            <!-- Tamko la Mkopa -->
+            <section class="form-section">
+                <h2>TAMKO LA MKOPAJI</h2>
+                <div class="input-box">
+                    <label for="loanStatement">
+                        MIMI, <input type="text" id="borrowerName" name="borrowerName" style="width: 75%;" /> 
+                        NATHIBITISHA KUWA TAARIFA ZOTE NILIZOTOA HAPO JUU NI ZA KWELI. 
+                        ENDAPO KUTATOKEA UDANGANYIFU WOWOTE SHERIA ICHUKUE NAFASI YAKE NA NIPO TAYARI DHAMANA ZANGU ZICHUKULIWE ILI KUFIDIA DENI LA MKOPO HUSIKA.
+                    </label>
+                </div>
+                <div class="input-box">
+                    <label for="officerName">Jina la Afisa Aliyetembelea:</label>
+                    <input type="text" id="officerName" name="officerName" required>
+                </div>
+                <div class="input-box">
+                    <label for="signatureDate">Tarehe:</label>
+                    <input type="date" id="signatureDate" name="signatureDate" required>
+                </div>
+            </section>
+
+            <!-- Sehemu mpya -->
+            <section class="form-section">
+                <h2>MAELEZO YA ZIADA</h2>
+                <div class="input-box">
+                    <label for="customerName">JINA LA MTEJA:</label>
+                    <input type="text" id="customerName" name="customerName">
+                </div>
+                <div class="input-box">
+                    <label for="gender">JINSIA:</label>
+                    <input type="text" id="gender" name="gender">
+                </div>
+                <div class="input-box">
+                    <label for="residence">MAHALI ANAPOISHI:</label>
+                    <input type="text" id="residence" name="residence">
+                </div>
+                <div class="input-box">
+                    <label for="ownership">JE NI MMILIKI/ UMEPANGA:</label>
+                    <input type="text" id="ownership" name="ownership">
+                </div>
+                <div class="input-box">
+                    <label for="phoneNumber">NAMBA YA SIMU:</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber">
+                </div>
+                <div class="input-box">
+                    <label for="houseOwnerName">JINA LA MWENYE NYUMBA:</label>
+                    <input type="text" id="houseOwnerName" name="houseOwnerName">
+                </div>
+                <div class="input-box">
+                    <label for="collateral">DHAMANA YA MKOPO:</label>
+                    <textarea id="collateral" name="collateral"></textarea>
+                </div>
+                <div class="input-box">
+                    <label for="maritalStatus2">UMEOA/ UMEOLEWA:</label>
+                    <input type="text" id="maritalStatus2" name="maritalStatus2">
+                </div>
+                <div class="input-box">
+                    <label for="signature">SAINI:</label>
+                    <input type="text" id="signature" name="signature">
+                </div>
+                <div class="input-box">
+                    <p>Taja mali yako na thamani yake ambayo unaiweka kama rehani endapo ukishindwa kulipa mkopo (Kama TV, Kitanda, Godoro, Pikipiki, poti kubwa lenye thamani, Sofa, Kochi, Sabufa, deki, Kompyuta nk.):</p>
+                    <label for="assetA">A.</label>
+                    <input type="text" id="assetA" name="assetA">
+                    <input type="text" id="valueA" name="valueA" placeholder="Thamani yake ni Tshs">
+                </div>
+                <div class="input-box">
+                    <label for="assetB">B.</label>
+                    <input type="text" id="assetB" name="assetB">
+                    <input type="text" id="valueB" name="valueB" placeholder="Thamani yake ni Tshs">
+                </div>
+                <div class="input-box">
+                    <label for="assetC">C.</label>
+                    <input type="text" id="assetC" name="assetC">
+                    <input type="text" id="valueC" name="valueC" placeholder="Thamani yake ni Tshs">
+                </div>
+                <div class="input-box">
+                    <label for="assetD">D.</label>
+                    <input type="text" id="assetD" name="assetD">
+                    <input type="text" id="valueD" name="valueD" placeholder="Thamani yake ni Tshs">
+                </div>
+            </section>
+
+            <!-- Links for saving data and navigation -->
+            <div class="input-box">
+                <a href="#" onclick="saveData()" class="btn">Hifadhi Taarifa</a>
+                <a href="mdhamini.html" class="btn">Endelea kwa Mdhamini</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Precious Investment Co. Ltd. Haki Zote Zimehifadhiwa.</p>
+    </footer>
+
+    <script>
+        function saveData() {
+            // Logic to save form data temporarily (e.g., to localStorage)
+            const formData = new FormData(document.getElementById('loanApplication'));
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+            localStorage.setItem('loanApplicationData', JSON.stringify(data));
+            alert('Taarifa zimehifadhiwa kikamilifu!');
+        }
+    </script>
+</body>
+</html>
