@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomu ya Mkopo - Precious Investment Co. Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- NavBar Section -->
+    <nav>
+        <ul>
+            <li><a href="mkopaji.html">Mkopaji</a></li>
+            <li><a href="mdhamini.html">Mdhamini</a></li>
+            <li><a href="ofisi.html" class="active">Ofisi</a></li>
+            <li><a href="kutuhusu.html">Kutuhusu</a></li>
+            <li><a href="register.html">Jisajili</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+    <!-- Matumizi ya Ofisi -->
+    <div class="container">
+        <form id="loanApplication" action="#" method="POST">
+            <section class="form-section">
+                <h2>KWA MATUMIZI YA OFISI TU</h2>
+                <div class="input-box">
+                    <label for="loanRecommendation">Inapendekezwa mwombaji APEWE/ ASIPEWE mkopo alioomba:</label>
+                    <input type="text" id="loanRecommendation" name="loanRecommendation" required>
+                </div>
+                <div class="input-box">
+                    <label for="reason">Sababu:</label>
+                    <textarea id="reason" name="reason" required></textarea>
+                </div>
+                <div class="input-box">
+                    <label for="loanOfficerName">Jina la Afisa Mkopo:</label>
+                    <input type="text" id="loanOfficerName" name="loanOfficerName" required>
+                </div>
+                <div class="input-box">
+                    <label for="loanOfficerSignature">Sahihi:</label>
+                    <input type="text" id="loanOfficerSignature" name="loanOfficerSignature" required>
+                </div>
+                <div class="input-box">
+                    <label for="loanOfficerDate">Tarehe:</label>
+                    <input type="date" id="loanOfficerDate" name="loanOfficerDate" required>
+                </div>
+            </section>
+
+            <!-- Msimamizi wa Mkopo -->
+            <section class="form-section">
+                <h2>MSIMAMIZI WA MKOPO</h2>
+                <div class="input-box">
+                    <label for="supervisorName">Jina:</label>
+                    <input type="text" id="supervisorName" name="supervisorName" required>
+                </div>
+                <div class="input-box">
+                    <label for="supervisorSignature">Sahihi:</label>
+                    <input type="text" id="supervisorSignature" name="supervisorSignature" required>
+                </div>
+                <div class="input-box">
+                    <label for="supervisorDate">Tarehe:</label>
+                    <input type="date" id="supervisorDate" name="supervisorDate" required>
+                </div>
+
+                <!-- Imeidhinishwa na Meneja wa Tawi -->
+                <h2>Imeidhinishwa na Meneja wa Tawi</h2>
+                <div class="input-box">
+                    <label for="branchManagerName">Jina la Meneja wa Tawi:</label>
+                    <input type="text" id="branchManagerName" name="branchManagerName" required>
+                </div>
+                <div class="input-box">
+                    <label for="branchManagerSignature">Sahihi ya Meneja wa Tawi:</label>
+                    <input type="text" id="branchManagerSignature" name="branchManagerSignature" required>
+                </div>
+                <div class="input-box">
+                    <label for="branchManagerDate">Tarehe ya Idhini:</label>
+                    <input type="date" id="branchManagerDate" name="branchManagerDate" required>
+                </div>
+            </section>
+
+            <!-- Submit Button -->
+            <div class="input-box">
+                <button type="submit" class="btn" onclick="submitForm(event)">Tuma</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Precious Investment Co. Ltd. Haki Zote Zimehifadhiwa.</p>
+    </footer>
+
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Retrieve data from mkopaji.html and mdhamini.html (stored in localStorage)
+            const mkopajiData = JSON.parse(localStorage.getItem('loanApplicationData')) || {};
+            const mdhaminiData = JSON.parse(localStorage.getItem('combinedLoanApplicationData')) || {};
+
+            // Collect data from ofisi.html
+            const ofisiData = new FormData(document.getElementById('loanApplication'));
+            const ofisiDataObj = {};
+            ofisiData.forEach((value, key) => {
+                ofisiDataObj[key] = value;
+            });
+
+            // Combine data from mkopaji.html, mdhamini.html, and ofisi.html
+            const combinedData = { ...mkopajiData, ...mdhaminiData, ...ofisiDataObj };
+
+            // Save combined data to localStorage (optional)
+            localStorage.setItem('finalLoanApplicationData', JSON.stringify(combinedData));
+
+            // Submit the combined data to the server (replace with your API endpoint)
+            fetch('https://your-api-endpoint.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(combinedData),
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Maombi yamewasilishwa kikamilifu!');
+                console.log('Success:', data);
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                alert('Hitilafu imetokea wakati wa kuwasilisha maombi.');
+            });
+        }
+    </script>
+</body>
+</html>
