@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="sw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomu ya Mkopo - Precious Investment Co. Ltd</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="mkopaji.html">Mkopaji</a></li>
+            <li><a href="mdhamini.html" class="active">Mdhamini</a></li>
+            <li><a href="ofisi.html">Ofisi</a></li>
+            <li><a href="kutuhusu.html">Kutuhusu</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <header class="header">
+            <h1>PRECIOUS INVESTMENT CO.LTD</h1>
+            <p>P.O.BOX 616, MOROGORO – IFAKARA BRANCH</p>
+            <p>PHONE NO. 0746-667797</p>
+        </header>
+
+        <form id="loanApplication">
+            <!-- Taarifa za Mdhamini -->
+            <section class="form-section">
+                <h2>TAARIFA ZA MDHAMINI</h2>
+                <div class="input-box">
+                    <label for="guarantorName">Jina la Mdhamini:</label>
+                    <input type="text" id="guarantorName" name="guarantorName" required>
+                </div>
+                <div class="input-box">
+                    <label for="photoGuarantor">Picha ya Mdhamini:</label>
+                    <input type="file" id="photoGuarantor" name="photoGuarantor" accept="image/*">
+                </div>
+                <div class="input-box">
+                    <label for="guarantorJob">Kazi ya Mdhamini:</label>
+                    <input type="text" id="guarantorJob" name="guarantorJob" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorWorkplace">Kituo cha Kazi:</label>
+                    <input type="text" id="guarantorWorkplace" name="guarantorWorkplace" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorAddress">Anuani ya Kituo cha Kazi:</label>
+                    <input type="text" id="guarantorAddress" name="guarantorAddress" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorStreet">Mtaa/Kitongoji:</label>
+                    <input type="text" id="guarantorStreet" name="guarantorStreet" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorWard">Kata:</label>
+                    <input type="text" id="guarantorWard" name="guarantorWard" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorDivision">Tarafa:</label>
+                    <input type="text" id="guarantorDivision" name="guarantorDivision" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorDistrict">Wilaya:</label>
+                    <input type="text" id="guarantorDistrict" name="guarantorDistrict" required>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorRegion">Mkoa:</label>
+                    <input type="text" id="guarantorRegion" name="guarantorRegion" required>
+                </div>
+                <div class="input-box">
+                    <label for="address">Mahali Anapoishi:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+                <div class="input-box">
+                    <label for="street">Mtaa:</label>
+                    <input type="text" id="street" name="street">
+                </div>
+                <div class="input-box">
+                    <label for="ward">Kata:</label>
+                    <input type="text" id="ward" name="ward">
+                </div>
+                <div class="input-box">
+                    <label for="division">Tarafa:</label>
+                    <input type="text" id="division" name="division">
+                </div>
+                <div class="input-box">
+                    <label for="district">Wilaya:</label>
+                    <input type="text" id="district" name="district">
+                </div>
+                <div class="input-box">
+                    <label for="region">Mkoa:</label>
+                    <input type="text" id="region" name="region">
+                </div>
+                <div class="input-box">
+                    <label for="guarantorPhoneNumber">Namba ya Simu ya Mdhamini:</label>
+                    <input type="tel" id="guarantorPhoneNumber" name="guarantorPhoneNumber" required>
+                </div>
+                <div class="input-box">
+                    <label for="signature">Saini:</label>
+                    <input type="text" id="signature" name="signature">
+                </div>
+            </section>
+
+            <!-- Taarifa za Mkopaji -->
+            <section class="form-section">
+                <h2>UDHAMINI WA MUME/MKE AU NDUGU</h2>
+                <div class="input-box">
+                    <label for="borrowerName">Mimi:</label>
+                    <input type="text" id="borrowerName" name="borrowerName" placeholder="Jina la Mkopaji">
+                </div>
+                <div class="input-box">
+                    <label for="spouseOrRelative">Mume/ Mke au ndugu wa:</label>
+                    <input type="text" id="spouseOrRelative" name="spouseOrRelative" placeholder="Jina la Mume/Mke au Ndugu">
+                </div>
+                <div class="input-box">
+                    <label for="guarantorStatement">Nakiri kwamba vitu vilivyoorodheshwa hapo juu kama dhamana ni mali yake/ mali yetu nakubali kuwa endapo atashindwa kurejesha mkopo huu kwa utaratibu uliowekwa na PRECIOUS INVESTMENT CO.LTD mali hizo zikamatwe na kuuzwa ili kulipa deni hilo.</label>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorSignature">Saini:</label>
+                    <input type="text" id="guarantorSignature" name="guarantorSignature" placeholder="Saini ya Mkopaji">
+                </div>
+            </section>
+
+            <!-- Taarifa za Mkopo -->
+            <section class="form-section">
+                <h2>TAARIFA ZA MKOPO</h2>
+                <div class="input-box">
+                    <label for="loanAmount">Mkopo wa Shilingi:</label>
+                    <input type="text" id="loanAmount" name="loanAmount">
+                </div>
+                <div class="input-box">
+                    <label for="loanPeriod">Utakapokopeshwa Ndani ya Siku:</label>
+                    <input type="text" id="loanPeriod" name="loanPeriod">
+                </div>
+                <div class="input-box">
+                    <label for="loanTotal">Jumla na Mkopo na Riba ni Tshs:</label>
+                    <input type="text" id="loanTotal" name="loanTotal">
+                </div>
+                <div class="input-box">
+                    <label for="repaymentStartDate">Tarehe ya Kuanza Marejesho:</label>
+                    <input type="date" id="repaymentStartDate" name="repaymentStartDate">
+                </div>
+                <div class="input-box">
+                    <label for="repaymentEndDate">Tarehe ya Kumaliza:</label>
+                    <input type="date" id="repaymentEndDate" name="repaymentEndDate">
+                </div>
+            </section>
+
+            <!-- Masharti ya Mkopo -->
+            <section class="form-section">
+                <h2>MASHARTI YA MKOPO</h2>
+                <ul>
+                    <li>Mteja atatakiwa kuwa na kitambulisho cha kupiga kura na passport size moja.</li>
+                    <li>Mkataba wa mkopo utavunjika baada ya siku mbili kutorejeshwa kiasi cha mkopo kilichokubaliwa ambapo dhamana zilizowekwa zitachukuliwa kufidia deni la mkopo.</li>
+                    <li>Muda wa marejesho ni kuanzia saa 3:00 asubuhi hadi saa 10:00 jioni.</li>
+                    <li>Marejesho yakicheleweshwa kufika ofisini kwa muda husika faini ni Tshs. 2,000/= (Elfu Mbili Tu).</li>
+                    <li>Mteja na mdhamini wa mkopo wawe na akili timamu.</li>
+                    <li>Mteja ahakikishe marejesho yake kabla hajaondoka ofisini.</li>
+                    <li>Wanachama wa kikundi watawajibika iwapo mwanakikundi mmoja haja-rejesha au kutoweka na mkopo.</li>
+                </ul>
+            </section>
+
+            <!-- Tamko la Mdhamini -->
+            <section class="form-section">
+                <h2>TAMKO LA MDHAMINI</h2>
+                <div class="input-box">
+                    <label for="guarantorName">Mimi:</label>
+                    <input type="text" id="guarantorName" name="guarantorName" placeholder="Jina la Mdhamini">
+                </div>
+                <div class="input-box">
+                    <label for="borrowerName">Nikiwa na akili timamu, nimekubali kumdhamini ndugu:</label>
+                    <input type="text" id="borrowerName" name="borrowerName" placeholder="Jina la Mkopaji">
+                </div>
+                <div class="input-box">
+                    <label for="guarantorStatement">Na nitakuwa tayari kulipa deni lake endapo mkopaji atashindwa kurejesha kiasi cha mkopo.</label>
+                </div>
+                <div class="input-box">
+                    <label for="guarantorSignature">Saini:</label>
+                    <input type="text" id="guarantorSignature" name="guarantorSignature" placeholder="Sahihi ya Mdhamini">
+                </div>
+            </section>
+
+            <!-- Links for saving data and navigation -->
+            <div class="input-box">
+                <a href="#" onclick="saveData()" class="btn">Hifadhi Taarifa</a>
+                <a href="ofisi.html" class="btn">Endelea kwa Ofisi</a>
+            </div>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Precious Investment Co. Ltd. Haki Zote Zimehifadhiwa.</p>
+    </footer>
+
+    <script>
+        function saveData() {
+            // Retrieve data from mkopaji.html (stored in localStorage)
+            const mkopajiData = JSON.parse(localStorage.getItem('loanApplicationData')) || {};
+
+            // Collect data from mdhamini.html
+            const mdhaminiData = new FormData(document.getElementById('loanApplication'));
+            const mdhaminiDataObj = {};
+            mdhaminiData.forEach((value, key) => {
+                mdhaminiDataObj[key] = value;
+            });
+
+            // Combine data from mkopaji.html and mdhamini.html
+            const combinedData = { ...mkopajiData, ...mdhaminiDataObj };
+
+            // Save combined data to localStorage
+            localStorage.setItem('combinedLoanApplicationData', JSON.stringify(combinedData));
+            alert('Taarifa zimehifadhiwa kikamilifu!');
+        }
+    </script>
+</body>
+</html>
