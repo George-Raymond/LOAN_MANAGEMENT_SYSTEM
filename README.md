@@ -68,7 +68,7 @@ Clone the Repository:
 
 bash
 Copy
-git clone https://github.com/your-username/precious-investment.git
+git clone https://github.com/George-Raymond/precious-investment.git
 cd precious-investment
 Set Up the Database:
 
