@@ -1,7 +1,7 @@
 Precious Investment Co. Ltd - Loan Management System
 This project is a Loan Management System developed for Precious Investment Co. Ltd. It allows users to apply for loans, manage loan applications, and handle administrative tasks such as approvals and tracking. The system is built using PHP for the backend, HTML/CSS for the frontend, and MySQL for database management.
 
-Features
+✨ Features
 User Authentication:
 
 Users can register and log in to access the system.
@@ -34,26 +34,19 @@ Responsive Design:
 
 The system is mobile-friendly and works seamlessly across devices.
 
-Project Structure
+📂 Project Structure
 The project consists of the following files:
 
-mkopaji.php - Loan application form for borrowers.
-
-mdhamini.php - Form for guarantors to provide their details.
-
-ofisi.php - Administrative interface for loan officers, supervisors, and branch managers.
-
-register.php - User registration page.
-
-login.php - User login page.
-
-dashboard.php - Dashboard for authenticated users (not implemented in the provided code).
-
-logout.php - Logs out the user and destroys the session.
-
-styles.css - Contains the styling for the project.
-
-Setup Instructions
+File Name	Description
+mkopaji.php	Loan application form for borrowers.
+mdhamini.php	Form for guarantors to provide their details.
+ofisi.php	Administrative interface for loan officers, supervisors, and branch managers.
+register.php	User registration page.
+login.php	User login page.
+dashboard.php	Dashboard for authenticated users (not implemented in the provided code).
+logout.php	Logs out the user and destroys the session.
+styles.css	Contains the styling for the project.
+🛠️ Setup Instructions
 Prerequisites
 Web Server: Apache or Nginx.
 
@@ -124,7 +117,7 @@ Access the application via your browser:
 
 Copy
 http://localhost/precious-investment
-Usage
+🚀 Usage
 Registration:
 
 Navigate to register.php to create a new account.
@@ -153,7 +146,7 @@ Logout:
 
 Click the "Logout" link to securely log out of the system.
 
-Security Considerations
+🔒 Security Considerations
 CSRF Protection:
 
 Each form includes a CSRF token to prevent cross-site request forgery attacks.
@@ -170,17 +163,7 @@ Input Validation:
 
 Both client-side (JavaScript) and server-side (PHP) validation are implemented to ensure data integrity.
 
-Screenshots
-Registration Page
-Registration Page
-
-Login Page
-Login Page
-
-Loan Application Form
-Loan Application Form
-
-Contributing
+🤝 Contributing
 Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
 
 Fork the repository.
@@ -191,12 +174,14 @@ Commit your changes.
 
 Submit a pull request.
 
-License
+📜 License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
-Contact
+📞 Contact
 For any questions or feedback, please contact:
 
-Name: [George-Raymond]
+Name: George Raymond
 
-Email: [raysgeorge429@gmail.com]
+Email: raysgeorge429@gmail.com
+
+GitHub: George-Raymond
