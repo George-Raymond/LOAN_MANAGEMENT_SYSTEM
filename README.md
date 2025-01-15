@@ -1,156 +1,202 @@
-# LOAN_MANAGEMENT_SYSTEM
-FRONT_END
-# Precious Investment Co. Ltd - Loan Management System
+Precious Investment Co. Ltd - Loan Management System
+This project is a Loan Management System developed for Precious Investment Co. Ltd. It allows users to apply for loans, manage loan applications, and handle administrative tasks such as approvals and tracking. The system is built using PHP for the backend, HTML/CSS for the frontend, and MySQL for database management.
 
-## Overview
-This project is a web-based loan management system for **Precious Investment Co. Ltd**, a financial institution providing loan services to individuals, businesses, and communities. The system allows users to apply for loans, manage loan-related information, and interact with the company through a user-friendly interface. The application is built using HTML, CSS, and JavaScript, with a focus on simplicity, security, and transparency.
+Features
+User Authentication:
 
----
+Users can register and log in to access the system.
 
-## Features
-1. **User Authentication**:
-   - Login and registration system for users.
-   - Secure password handling and token-based authentication.
+Session management ensures secure access to authenticated pages.
 
-2. **Loan Application**:
-   - Multi-step loan application process:
-     - **Mkopaji (Borrower)**: Collects borrower's personal and financial details.
-     - **Mdhamini (Guarantor)**: Collects guarantor's information.
-     - **Ofisi (Office)**: Internal use for loan approval and recommendations.
-   - File upload for borrower and guarantor photos.
-   - Dynamic form validation and data storage using `localStorage`.
+Loan Application:
 
-3. **Navigation**:
-   - Responsive navigation bar with active link highlighting.
-   - Easy access to different sections: Borrower, Guarantor, Office, About Us, Register, and Login.
+Borrowers can fill out loan application forms with personal details, employment information, and collateral details.
 
-4. **About Us Page**:
-   - Detailed information about the company, including mission, vision, values, and contact details.
+Guarantors can provide their details as part of the loan application process.
 
-5. **Responsive Design**:
-   - Mobile-friendly layout with a clean and modern design.
-   - Gradient backgrounds and consistent styling across all pages.
+Office Use:
 
-6. **Data Storage**:
-   - Temporary storage of form data using `localStorage`.
-   - Combined data submission for loan applications.
+Loan officers can review and recommend loan applications.
 
-7. **API Integration**:
-   - Integration with a backend API for user registration, login, and loan submission.
+Supervisors and branch managers can approve or reject loan applications.
 
----
+Data Persistence:
 
-## Pages
-1. **Home (About Us)**:
-   - Provides an overview of the company, including its mission, vision, values, and contact information.
+All form data is stored in a MySQL database for future reference and processing.
 
-2. **Mkopaji (Borrower)**:
-   - Form for collecting borrower's personal, residential, and employment details.
+Security:
 
-3. **Mdhamini (Guarantor)**:
-   - Form for collecting guarantor's personal and employment details.
+CSRF protection to prevent cross-site request forgery attacks.
 
-4. **Ofisi (Office)**:
-   - Internal form for loan approval and recommendations by loan officers and branch managers.
+Password hashing for secure storage of user credentials.
 
-5. **Register**:
-   - User registration form with username and password fields.
+Responsive Design:
 
-6. **Login**:
-   - User login form with token-based authentication.
+The system is mobile-friendly and works seamlessly across devices.
 
----
+Project Structure
+The project consists of the following files:
 
-## Technologies Used
-- **Frontend**:
-  - HTML5
-  - CSS3 (with gradients, flexbox, and responsive design)
-  - JavaScript (for form handling, data storage, and API integration)
+mkopaji.php - Loan application form for borrowers.
 
-- **Backend**:
-  - API endpoints for user authentication and loan submission (e.g., `https://loan-management-system-jf05.onrender.com`).
+mdhamini.php - Form for guarantors to provide their details.
 
-- **Tools**:
-  - `localStorage` for temporary data storage.
-  - Fetch API for backend communication.
+ofisi.php - Administrative interface for loan officers, supervisors, and branch managers.
 
----
+register.php - User registration page.
 
-## How to Use
-1. **Register**:
-   - Navigate to the **Register** page and create an account by providing a username and password.
+login.php - User login page.
 
-2. **Login**:
-   - Use your credentials to log in on the **Login** page.
+dashboard.php - Dashboard for authenticated users (not implemented in the provided code).
 
-3. **Apply for a Loan**:
-   - Start the loan application process by filling out the **Mkopaji** form.
-   - Proceed to the **Mdhamini** form to provide guarantor details.
-   - Complete the process on the **Ofisi** page for internal approval.
+logout.php - Logs out the user and destroys the session.
 
-4. **View Company Information**:
-   - Visit the **About Us** page to learn more about Precious Investment Co. Ltd.
+styles.css - Contains the styling for the project.
 
----
+Setup Instructions
+Prerequisites
+Web Server: Apache or Nginx.
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/your-username/loan-management-system.git
-   ```
-2. Open the project folder:
-   ```bash
-   cd loan-management-system
-   ```
-3. Open the `index.html` file in your browser to view the application.
+PHP: Version 7.0 or higher.
 
----
+MySQL: For database management.
 
-## API Endpoints
-- **Login**: `POST https://loan-management-system-jf05.onrender.com/token`
-- **Register**: `POST https://loan-management-system-jf05.onrender.com/register`
-- **Loan Submission**: `POST https://your-api-endpoint.com/submit`
+Browser: Chrome, Firefox, or any modern browser.
 
----
+Steps
+Clone the Repository:
 
-## Styling
-- **Colors**:
-  - Primary: Green (`#4CAF50`)
-  - Secondary: Light Green (`#81C784`)
-  - Background: Gradient from white to light green.
+bash
+Copy
+git clone https://github.com/your-username/precious-investment.git
+cd precious-investment
+Set Up the Database:
 
-- **Fonts**:
-  - Arial, sans-serif.
+Create a MySQL database named precious_investment.
 
-- **Responsive Design**:
-  - Flexbox for layout.
-  - Media queries for mobile compatibility.
+Import the following SQL schema:
 
----
+sql
+Copy
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL
+);
 
-## Future Improvements
-1. **Backend Integration**:
-   - Connect the frontend to a fully functional backend for persistent data storage.
-2. **User Dashboard**:
-   - Add a dashboard for users to track loan status and payments.
-3. **Admin Panel**:
-   - Create an admin panel for managing loans, users, and approvals.
-4. **Enhanced Security**:
-   - Implement stronger authentication mechanisms (e.g., OAuth, JWT).
+CREATE TABLE loan_applications (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    fullName VARCHAR(100) NOT NULL,
+    phone VARCHAR(15) NOT NULL,
+    photoPath VARCHAR(255),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
 
----
+CREATE TABLE ofisi_data (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    loanRecommendation TEXT NOT NULL,
+    reason TEXT NOT NULL,
+    loanOfficerName VARCHAR(100) NOT NULL,
+    loanOfficerSignature VARCHAR(100) NOT NULL,
+    loanOfficerDate DATE NOT NULL,
+    supervisorName VARCHAR(100) NOT NULL,
+    supervisorSignature VARCHAR(100) NOT NULL,
+    supervisorDate DATE NOT NULL,
+    branchManagerName VARCHAR(100) NOT NULL,
+    branchManagerSignature VARCHAR(100) NOT NULL,
+    branchManagerDate DATE NOT NULL
+);
+Configure Database Connection:
 
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+Update the database credentials in each PHP file (e.g., register.php, mkopaji.php):
 
----
+php
+Copy
+$servername = "localhost";
+$username_db = "root";
+$password_db = "";
+$dbname = "precious_investment";
+Run the Application:
 
-## Contact Information
-- **Company Name**: Precious Investment Co. Ltd
-- **Address**: P.O. Box 616, Morogoro – Ifakara Branch
-- **Phone**: 0746-667797
-- **Email**: info@preciousinvestment.co.tz
+Place the project files in your web server's root directory (e.g., htdocs for XAMPP or www for WAMP).
 
----
+Access the application via your browser:
 
-**© 2025 Precious Investment Co. Ltd. All Rights Reserved.**
+Copy
+http://localhost/precious-investment
+Usage
+Registration:
+
+Navigate to register.php to create a new account.
+
+Fill in the required details (username and password).
+
+Login:
+
+Navigate to login.php to log in with your credentials.
+
+Loan Application:
+
+After logging in, go to mkopaji.php to fill out the loan application form.
+
+Provide all required details, including personal information, employment details, and collateral.
+
+Guarantor Details:
+
+Navigate to mdhamini.php to provide guarantor details.
+
+Office Use:
+
+Loan officers, supervisors, and branch managers can use ofisi.php to review and approve loan applications.
+
+Logout:
+
+Click the "Logout" link to securely log out of the system.
+
+Security Considerations
+CSRF Protection:
+
+Each form includes a CSRF token to prevent cross-site request forgery attacks.
+
+Password Hashing:
+
+User passwords are hashed using PHP's password_hash() function for secure storage.
+
+Session Management:
+
+Session IDs are regenerated periodically to prevent session fixation attacks.
+
+Input Validation:
+
+Both client-side (JavaScript) and server-side (PHP) validation are implemented to ensure data integrity.
+
+Screenshots
+Registration Page
+Registration Page
+
+Login Page
+Login Page
+
+Loan Application Form
+Loan Application Form
+
+Contributing
+Contributions are welcome! If you'd like to contribute to this project, please follow these steps:
+
+Fork the repository.
+
+Create a new branch for your feature or bugfix.
+
+Commit your changes.
+
+Submit a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Contact
+For any questions or feedback, please contact:
+
+Name: [George-Raymond]
+
+Email: [raysgeorge429@gmail.com]
